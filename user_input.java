@@ -7,6 +7,7 @@ public class user_input {
         Scanner scanner = new Scanner(System.in);
         String name = scanner.nextLine();
         System.out.println("Hello, I am " + name);
+        System.out.println("Hello, " + scanner.nextLine());
     }
 
 }
