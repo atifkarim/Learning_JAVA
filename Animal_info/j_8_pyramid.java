@@ -1,6 +1,6 @@
 /**
  * This file will show calling different function from main function.
- * Later, class from another file will be used here
+ * Later, class from another file will be used here, see Animal.java file
  */
 
 public class j_8_pyramid {
@@ -9,6 +9,13 @@ public class j_8_pyramid {
         tellSomeThing();
         String basicInfoResult = basicInfo("Java", 100);
         System.out.println(basicInfoResult);
+
+        Animal cat = new Animal(); // Animal object
+        cat.animalAge = 43; // Assigning value to no static member variable
+        cat.animalName = "Cat"; // Assigning value to no static member variable
+        System.out.println(cat.animalAge); // Printing no-static member variable
+        Animal.animalInfo(); // calling static function directly with class name
+        cat.animalNonStaticInfo(); // calling non static function with object
     }
 
     /**
