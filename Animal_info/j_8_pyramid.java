@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 /**
  * This file will show calling different function from main function.
  * Later, class from another file will be used here, see Animal.java file
@@ -16,6 +18,10 @@ public class j_8_pyramid {
         System.out.println(cat.animalAge); // Printing no-static member variable
         Animal.animalInfo(); // calling static function directly with class name
         cat.animalNonStaticInfo(); // calling non static function with object
+
+        int [] myArray = {1,2,3,5,4};
+        System.out.println("Whole myArray: " + Arrays.toString(myArray));
+        System.out.println("index 0 : " + myArray[0]);
     }
 
     /**
