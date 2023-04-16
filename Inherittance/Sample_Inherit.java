@@ -2,7 +2,7 @@
  * @Author: MD Atif Bin Karim
  * @Date:   01-01-1970 01:00:00
  * @Last Modified by:   MD Atif Bin Karim
- * @Last Modified time: 16-04-2023 15:16:24
+ * @Last Modified time: 16-04-2023 16:11:42
  * @Brief: This file shows the inheritance property
  */
 
@@ -29,6 +29,11 @@ class Parent {
     // Following class will be overridden
     public void makeOverride(){
         System.out.println("Parent class: Am I overridden?");
+    }
+
+    // without specifier a method is public
+    void whoIam(){
+        System.out.println("WHO I AM???");
     }
 }
 
@@ -105,6 +110,7 @@ public class Sample_Inherit {
         Parent par_obj = new Parent(20);
         par_obj.displayAge();
         par_obj.displayAgeMore();
+        par_obj.whoIam();
 
         Child chl_obj = new Child(12, "BD");
         chl_obj.displayAgeChild();
