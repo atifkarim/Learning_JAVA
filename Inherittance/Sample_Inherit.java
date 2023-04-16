@@ -2,7 +2,7 @@
  * @Author: MD Atif Bin Karim
  * @Date:   01-01-1970 01:00:00
  * @Last Modified by:   MD Atif Bin Karim
- * @Last Modified time: 16-04-2023 13:03:53
+ * @Last Modified time: 16-04-2023 14:06:04
  */
 
 // Without any specifier class is private in Java. Insane
@@ -23,6 +23,11 @@ class Parent {
     public void displayAgeMore()
     {
         System.out.println("Parent class: Value of age without this: " + age);
+    }
+
+    // Following class will be overridden
+    public void makeOverride(){
+        System.out.println("Parent class: Am I overridden?");
     }
 }
 
@@ -75,6 +80,13 @@ class Child extends Parent{
     public String count(String count){
         return count;
     }
+
+    // Following class overriddes method of parent class
+
+    @Override
+    public void makeOverride(){
+        System.out.println("Child class: I have successfully overridden");
+    }
 }
 
 public class Sample_Inherit {
@@ -98,6 +110,15 @@ public class Sample_Inherit {
         System.out.println(chl_obj.count("I am count string"));
         System.out.println("Counted num : " + chl_obj.count(45));
         
+        // Calling override method of child class
+        chl_obj.makeOverride();
+
+        // Calling method of parent class which is overridden
+        par_obj.makeOverride();
+
+        // Calling method of parent class which is overridden with child class object
+        // TODO This one is failed.
+        // ((Parent) chl_obj).makeOverride();
     }
 
 }
