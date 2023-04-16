@@ -2,7 +2,8 @@
  * @Author: MD Atif Bin Karim
  * @Date:   01-01-1970 01:00:00
  * @Last Modified by:   MD Atif Bin Karim
- * @Last Modified time: 16-04-2023 14:10:13
+ * @Last Modified time: 16-04-2023 15:16:24
+ * @Brief: This file shows the inheritance property
  */
 
 // Without any specifier class is private in Java. Insane
