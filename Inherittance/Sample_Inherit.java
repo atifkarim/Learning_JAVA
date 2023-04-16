@@ -2,7 +2,7 @@
  * @Author: MD Atif Bin Karim
  * @Date:   01-01-1970 01:00:00
  * @Last Modified by:   MD Atif Bin Karim
- * @Last Modified time: 16-04-2023 14:06:04
+ * @Last Modified time: 16-04-2023 14:10:13
  */
 
 // Without any specifier class is private in Java. Insane
@@ -82,10 +82,19 @@ class Child extends Parent{
     }
 
     // Following class overriddes method of parent class
-
     @Override
     public void makeOverride(){
         System.out.println("Child class: I have successfully overridden");
+    }
+
+    public void callParentOverriddenMethod(){
+        System.out.println("\nThis function call both method from Parent and child class");
+
+        // this calls overriding method
+        makeOverride();
+
+        // this calls overridden method
+        super.makeOverride();
     }
 }
 
@@ -119,6 +128,8 @@ public class Sample_Inherit {
         // Calling method of parent class which is overridden with child class object
         // TODO This one is failed.
         // ((Parent) chl_obj).makeOverride();
+
+        chl_obj.callParentOverriddenMethod();
     }
 
 }
