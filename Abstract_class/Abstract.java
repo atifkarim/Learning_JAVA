@@ -2,7 +2,7 @@
  * @Author: MD Atif Bin Karim
  * @Date:   01-01-1970 01:00:00
  * @Last Modified by:   MD Atif Bin Karim
- * @Last Modified time: 16-04-2023 15:36:00
+ * @Last Modified time: 16-04-2023 15:43:49
  * @Brief: This file shows the abstract class property
  */
 package Abstract_class;
@@ -12,6 +12,14 @@ abstract class Language {
 
     public void doCommunicate(String name){
         System.out.println("Language class communicates with " + name);
+    }
+}
+
+abstract class Sound {
+    abstract void printSound();
+
+    public void doCommunicate(String name){
+        System.out.println("Sound class plays with " + name);
     }
 }
 
