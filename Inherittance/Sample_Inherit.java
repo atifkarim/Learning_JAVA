@@ -2,7 +2,7 @@
  * @Author: MD Atif Bin Karim
  * @Date:   01-01-1970 01:00:00
  * @Last Modified by:   MD Atif Bin Karim
- * @Last Modified time: 16-04-2023 12:12:24
+ * @Last Modified time: 16-04-2023 12:16:52
  */
 
 // Without any specifier class is private in Java. Insane
@@ -28,6 +28,9 @@ class Parent {
 
 class Child extends Parent{
 
+    // Private member variable of child class
+    private int childage;
+
     // Constructor of Child class
     public Child(int age_){
 
@@ -40,6 +43,17 @@ class Child extends Parent{
         System.out.print("Age of child is ");
         displayAge();
     }
+
+    // Set method for childage variable
+    public void childAge(int childage_)
+    {
+        childage = childage_;
+    }
+
+    // Get method for childage variable
+    public int childAge(){
+        return childage;
+    }
 }
 
 public class Sample_Inherit {
@@ -51,6 +65,11 @@ public class Sample_Inherit {
 
         Child chl_obj = new Child(12);
         chl_obj.displayAgeChild();
+
+        // Calling set get method of child age
+        chl_obj.childAge(5);
+        System.out.println("childage: " + chl_obj.childAge());
+        
     }
 
 }
