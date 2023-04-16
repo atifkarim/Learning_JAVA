@@ -2,7 +2,7 @@
  * @Author: MD Atif Bin Karim
  * @Date:   01-01-1970 01:00:00
  * @Last Modified by:   MD Atif Bin Karim
- * @Last Modified time: 16-04-2023 12:16:52
+ * @Last Modified time: 16-04-2023 12:20:43
  */
 
 // Without any specifier class is private in Java. Insane
@@ -16,13 +16,13 @@ class Parent {
     // Without static type you can use "this" keyword
     public void displayAge()
     {
-        System.out.println("Value of age: " + this.age);
+        System.out.println("Parent class: Value of age: " + this.age);
     }
 
     // Printing age variable directly
     public void displayAgeMore()
     {
-        System.out.println("Value of age without this: " + age);
+        System.out.println("Parent class: Value of age without this: " + age);
     }
 }
 
@@ -38,9 +38,10 @@ class Child extends Parent{
         super(age_);
     }
 
+    // This function calls the function from Parent class
     public void displayAgeChild()
     {
-        System.out.print("Age of child is ");
+        System.out.print("Child class: ");
         displayAge();
     }
 
