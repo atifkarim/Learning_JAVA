@@ -2,7 +2,7 @@
  * @Author: MD Atif Bin Karim
  * @Date:   01-01-1970 01:00:00
  * @Last Modified by:   MD Atif Bin Karim
- * @Last Modified time: 16-04-2023 12:54:36
+ * @Last Modified time: 16-04-2023 13:03:53
  */
 
 // Without any specifier class is private in Java. Insane
@@ -66,6 +66,15 @@ class Child extends Parent{
         System.out.print("Child class: childname: ");
         return childname;
     }
+
+    // The following 2 methods are overloaded
+    public int count(int count){
+        return count;
+    }
+
+    public String count(String count){
+        return count;
+    }
 }
 
 public class Sample_Inherit {
@@ -82,8 +91,12 @@ public class Sample_Inherit {
         chl_obj.childAge(5);
         System.out.println("childage: " + chl_obj.childAge());
         
-        // calling get methid of child class to get childname
+        // calling get method of child class to get childname
         System.out.println(chl_obj.childName());
+
+        // calling overloaded method
+        System.out.println(chl_obj.count("I am count string"));
+        System.out.println("Counted num : " + chl_obj.count(45));
         
     }
 
